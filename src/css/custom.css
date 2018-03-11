@@ -120,8 +120,9 @@ figure {
 #site-header {
 	background-color: #FFF;
 	padding: 25px 20px;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 	border-bottom: 1px solid #e7e7e7;
+	background: none repeat scroll 0 0 #fbfbfb;
 }
 
 /**
@@ -210,6 +211,12 @@ figure {
 	max-width: 100%;
 }
 
+.cl-effect-11 a:hover {
+	
+	background: #5a88ca;
+    color: #fff;
+}
+
 /**
  * 4.0 - Home/Blog
  */
@@ -220,15 +227,15 @@ figure {
 
 .post {
 	background: #fff;
-	padding: 30px 30px 0;
+	padding:  0px  0px 0;
 }
 
 .entry-title {
 	text-align: center;
-	font-size: 1.9em;
-	margin-bottom: 20px;
+	font-size: 24px;
+	margin-bottom: 10px;
 	line-height: 1.6;
-	padding: 10px 20px 0;
+	padding: 3px 3px 0;
 }
 
 .entry-meta {
@@ -359,7 +366,7 @@ figure {
 
 .widget-title {  
 	font-size: 1.5em;  
-	margin-bottom: 20px;  
+	margin-bottom: 10px;  
 	line-height: 1.6;  
 	padding: 10px 0 0;
 	font-weight: 400;

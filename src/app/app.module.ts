@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
+import { ChoixOperationComponent } from './choix-operation/choix-operation.component';
+import { OperationComponent } from './operation/operation.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { AsideComponent } from './aside/aside.component';
     HeaderComponent,
     MobileMenuComponent,
     FooterComponent,
-    AsideComponent
+    AsideComponent,
+    ChoixOperationComponent,
+    OperationComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule
