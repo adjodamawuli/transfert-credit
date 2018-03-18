@@ -1,3 +1,9 @@
+
+import { HttpModule } from '@angular/http';
+import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +16,20 @@ import { AsideComponent } from './aside/aside.component';
 import { ChoixOperationComponent } from './choix-operation/choix-operation.component';
 import { OperationComponent } from './operation/operation.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './menu/menu.component';
+import { RegisterComponent } from './register/register.component';
 
+const routes = [
+  { path: '', component: HomeComponent},
+  { path: 'operation', component: OperationComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'menu', component: MenuComponent}
+
+];
 
 @NgModule({
   declarations: [
@@ -21,10 +40,19 @@ import { CarouselComponent } from './carousel/carousel.component';
     AsideComponent,
     ChoixOperationComponent,
     OperationComponent,
-    CarouselComponent
+    CarouselComponent,
+    ContactComponent,
+    HomeComponent,
+    LoginComponent,
+    MenuComponent,
+    RegisterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
