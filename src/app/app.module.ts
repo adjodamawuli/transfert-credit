@@ -6,7 +6,11 @@ import {RouterModule} from '@angular/router';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { MatButtonModule, MatToolbarModule, MatFormFieldModule } from '@angular/material';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +28,7 @@ import { RegisterComponent } from './register/register.component';
 
 const routes = [
   { path: '', component: HomeComponent},
-  { path: 'operation', component: OperationComponent},
+  { path: 'operation/:id', component: OperationComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'login', component: LoginComponent},
   { path: 'menu', component: MenuComponent}
@@ -52,7 +56,20 @@ const routes = [
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatFormFieldModule,
     RouterModule.forRoot(routes)
+  ],
+  exports: [
+    MatButtonModule,
+    MatToolbarModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
